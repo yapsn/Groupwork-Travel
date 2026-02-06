@@ -1,0 +1,6 @@
+name = "smart-pharmacy-hub"
+main = "" # This is not a worker, so we leave it empty
+compatibility_date = "2024-03-20"
+
+[site]
+bucket = "."
