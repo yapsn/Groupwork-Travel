@@ -123,20 +123,12 @@ nav {
     box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
 }
 
-/* --- Dashboard Section --- */
-.dashboard {
+/* --- Services Overview --- */
+.services-overview {
     padding: 4rem 2rem;
-    background-color: var(--navy);
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--white);
-    margin-bottom: 3rem;
-}
-
-.dashboard-grid {
+.service-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -144,43 +136,42 @@ nav {
     margin: 0 auto;
 }
 
-.card {
+.service-card {
     background-color: var(--light-navy);
     padding: 2.5rem;
     border-radius: 10px;
+    text-decoration: none;
+    color: var(--slate);
     border: 1px solid transparent;
     transition: transform 0.3s, border-color 0.3s;
 }
 
-.card:hover {
+.service-card:hover {
     transform: translateY(-10px);
     border-color: var(--teal);
 }
 
 .card-icon {
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
-.card-icon img {
-    filter: invert(1);
-    opacity: 0.8;
-}
-
-.card h3 {
+.service-card h3 {
     font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 0.5rem;
 }
 
-.card-link {
-    color: var(--teal);
-    font-weight: 500;
-    text-decoration: none;
+/* --- Why Choose Us --- */
+.why-choose-us {
+    padding: 4rem 2rem;
 }
 
-/* --- Why Us Section --- */
-.why-us {
-    padding: 4rem 2rem;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 3rem;
 }
 
 .features-grid {
@@ -191,159 +182,73 @@ nav {
     margin: 0 auto;
 }
 
-.feature h3 {
+.feature-item h4 {
     font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 1rem;
 }
 
-/* --- Testimonials --- */
-.testimonials {
+
+/* --- Reviews Section --- */
+.reviews {
     padding: 4rem 2rem;
     background-color: var(--navy);
 }
 
-.testimonial-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial-card {
-    background-color: var(--light-navy);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 400px;
-    font-style: italic;
-}
-
-.testimonial-card h4 {
-    color: var(--teal);
-    text-align: right;
-    font-style: normal;
-}
-
-/* --- Partners --- */
-.partners {
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.partners h3 {
-    color: var(--slate);
-    margin-bottom: 2rem;
-}
-
-.partner-logos {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    filter: grayscale(100%);
-    opacity: 0.6;
-}
-
-/* --- Service Page Specific --- */
-.service-page {
-    padding: 4rem 2rem;
+.carousel-container {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-item {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background-color: var(--light-navy);
+    border-radius: 10px;
     text-align: center;
 }
 
-.consultation-form, .search-bar-container, .map-placeholder, .clinic-list, .emergency-contacts {
-    margin-top: 3rem;
+.review-item p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
-.form-group {
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--white);
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--light-navy);
-    border: 1px solid var(--navy);
-    border-radius: 5px;
-    color: var(--white);
-    font-size: 1rem;
-}
-
-.search-bar-container {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.search-input {
-    flex-grow: 1;
-    padding: 1rem;
-    background-color: var(--light-navy);
-    border: 1px solid var(--navy);
-    border-radius: 5px;
-    color: var(--white);
-    font-size: 1rem;
-}
-
-.search-button {
-    background-color: var(--teal);
-    color: var(--dark-blue);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.map-placeholder {
-    background-color: var(--light-navy);
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.clinic-list {
-    text-align: left;
-    margin-top: 2rem;
-}
-
-.emergency-page h1 {
-    color: #ff6b6b;
-}
-
-.emergency-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-}
-
-.contact-card {
-    background-color: var(--light-navy);
-    padding: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-}
-
-.contact-card h3 {
-    color: var(--white);
-    margin-bottom: 0.5rem;
-}
-
-.contact-card p {
-    font-size: 2rem;
+.review-item cite {
     font-weight: 700;
     color: var(--teal);
 }
+
+.carousel-navigation {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.carousel-button {
+    background: transparent;
+    border: 2px solid var(--teal);
+    color: var(--teal);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: var(--teal);
+    color: var(--dark-blue);
+}
+
 
 /* --- Footer --- */
 footer {
