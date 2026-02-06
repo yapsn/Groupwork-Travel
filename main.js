@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateCarousel() {
             const offset = -currentIndex * 100;
             carousel.style.transform = `translateX(${offset}%)`;
+            reviews.forEach((review, index) => {
+                review.classList.toggle('active', index === currentIndex);
+            });
         }
 
         function showNextReview() {
@@ -50,6 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Pause on hover
         carousel.addEventListener('mouseenter', stopAutoScroll);
         carousel.addEventListener('mouseleave', startAutoScroll);
+
+        // Initialize the first review as active
+        if (reviews.length > 0) {
+            reviews[0].classList.add('active');
+        }
 
         startAutoScroll(); // Initialize
     }

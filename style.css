@@ -213,6 +213,14 @@ nav {
     background-color: var(--light-navy);
     border-radius: 10px;
     text-align: center;
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.review-item.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .review-item p {
