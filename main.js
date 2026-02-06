@@ -1,37 +1,4 @@
-import './DiagnosticConsole.js';
-
 document.addEventListener('DOMContentLoaded', () => {
-    const diagnosticConsole = document.querySelector('diagnostic-console');
-
-    // --- Diagnostic Console Integration ---
-    if (diagnosticConsole) {
-        const originalConsoleLog = console.log;
-        const originalConsoleError = console.error;
-        const originalConsoleWarn = console.warn;
-
-        console.log = function(...args) {
-            originalConsoleLog.apply(console, args);
-            diagnosticConsole.log(args.join(' '), 'log');
-        };
-
-        console.error = function(...args) {
-            originalConsoleError.apply(console, args);
-            diagnosticConsole.log(args.join(' '), 'error');
-        };
-
-        console.warn = function(...args) {
-            originalConsoleWarn.apply(console, args);
-            diagnosticConsole.log(args.join(' '), 'warn');
-        };
-
-        window.onerror = function(message, source, lineno, colno, error) {
-            const errorMessage = `${message} at ${source}:${lineno}:${colno}`;
-            console.error(errorMessage, error);
-            return false; // Prevents the firing of the default event handler
-        };
-
-        console.log("Diagnostic console initialized.");
-    }
 
     // --- Review Carousel --- 
     const carousel = document.querySelector('.review-carousel');
@@ -85,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carousel.addEventListener('mouseleave', startAutoScroll);
 
         startAutoScroll(); // Initialize
-        console.log("Review carousel initialized.");
     }
 
     // --- Existing Functionality ---
@@ -118,10 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll').forEach(element => {
         observer.observe(element);
     });
-
-    // Test log to show console is working
-    setTimeout(() => {
-        console.log("This is a test log after 2 seconds.");
-        console.warn("This is a test warning.");
-    }, 2000);
 });

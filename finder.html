@@ -31,19 +31,16 @@
     <main>
         <section class="service-page">
             <h1 class="section-title animate-on-scroll">Urgent Care Finder</h1>
-            <p class="animate-on-scroll">Find a 24/7 clinic or hospital near you.</p>
+            <p class="animate-on-scroll">Find the nearest urgent care center with the shortest wait times.</p>
 
-            <div class="map-placeholder animate-on-scroll">
-                <p>Interactive Map Coming Soon</p>
+            <div class="location-finder animate-on-scroll">
+                <input type="text" placeholder="Enter your zip code..." class="search-bar">
+                <button class="cta-button">Find Care</button>
             </div>
 
-            <div class="clinic-list animate-on-scroll">
-                <h3>Nearby Clinics:</h3>
-                <ul>
-                    <li>City Central Hospital - 2.5 miles away</li>
-                    <li>Sunrise Urgent Care - 3.1 miles away</li>
-                    <li>Northside Medical Center - 4.2 miles away</li>
-                </ul>
+            <div class="results-map animate-on-scroll">
+                <!-- Placeholder for map -->
+                <img src="https://storage.googleapis.com/gemini-studio-site-assets/images/google-map-placeholder.png" alt="Map placeholder" style="width:100%; height:auto; border-radius: 8px;">
             </div>
         </section>
     </main>
@@ -65,7 +62,6 @@
             <p>&copy; 2024 Smart Pharmacy Hub. All Rights Reserved.</p>
         </div>
     </footer>
-    <diagnostic-console></diagnostic-console>
     <script type="module" src="main.js"></script>
 </body>
 </html>
